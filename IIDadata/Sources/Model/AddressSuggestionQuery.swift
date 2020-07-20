@@ -110,6 +110,10 @@ public struct RegionPriority: Encodable{
 ///ScaleBound holds a value for `from_bound` and `to_bound` as a ScaleLevel.
 ///See
 ///[Dadata online API documentation](https://confluence.hflabs.ru/pages/viewpage.action?pageId=285343795) for API reference.
-public struct ScaleBound: Encodable{
-    public var value: ScaleLevel?
+open class ScaleBound: Encodable {
+    open var value: ScaleLevel?
+    
+    public init(value: ScaleLevel? = nil) {
+        self.value = value
+    }
 }
