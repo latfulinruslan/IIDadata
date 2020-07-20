@@ -9,15 +9,15 @@ import Foundation
 
 ///AddressSuggestionQuery represents an serializable object used to perform certain queries.
 public class AddressSuggestionQuery: Encodable, DadataQueryProtocol{
-    let query: String
-    let queryType: AddressQueryType
-    var resultsCount: Int? = 10
-    var language: QueryResultLanguage?
-    var constraints: [AddressQueryConstraint]?
-    var regionPriority: [RegionPriority]?
-    var upperScaleLimit: ScaleBound?
-    var lowerScaleLimit: ScaleBound?
-    var trimRegionResult: Bool = false
+    public let query: String
+    public let queryType: AddressQueryType
+    open var resultsCount: Int? = 10
+    open var language: QueryResultLanguage?
+    open var constraints: [AddressQueryConstraint]?
+    open var regionPriority: [RegionPriority]?
+    open var upperScaleLimit: ScaleBound?
+    open var lowerScaleLimit: ScaleBound?
+    open var trimRegionResult: Bool = false
     
     ///New instance of AddressSuggestionQuery defaulting to simple address suggestions request.
     ///- Parameter query: Query string to be sent to API.
@@ -110,6 +110,6 @@ public struct RegionPriority: Encodable{
 ///ScaleBound holds a value for `from_bound` and `to_bound` as a ScaleLevel.
 ///See
 ///[Dadata online API documentation](https://confluence.hflabs.ru/pages/viewpage.action?pageId=285343795) for API reference.
-struct ScaleBound: Encodable{
+public struct ScaleBound: Encodable{
     var value: ScaleLevel?
 }
