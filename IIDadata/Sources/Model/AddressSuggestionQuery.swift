@@ -8,7 +8,7 @@
 import Foundation
 
 ///AddressSuggestionQuery represents an serializable object used to perform certain queries.
-public class AddressSuggestionQuery: Encodable, DadataQueryProtocol{
+open class AddressSuggestionQuery: Encodable, DadataQueryProtocol{
     public let query: String
     public let queryType: AddressQueryType
     open var resultsCount: Int? = 10
