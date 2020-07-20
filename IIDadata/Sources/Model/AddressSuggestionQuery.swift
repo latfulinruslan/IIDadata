@@ -111,5 +111,5 @@ public struct RegionPriority: Encodable{
 ///See
 ///[Dadata online API documentation](https://confluence.hflabs.ru/pages/viewpage.action?pageId=285343795) for API reference.
 public struct ScaleBound: Encodable{
-    var value: ScaleLevel?
+    public var value: ScaleLevel?
 }
